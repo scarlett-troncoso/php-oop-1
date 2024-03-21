@@ -16,30 +16,34 @@ class Movie{
         $this-> cast = $cast;
     }
 
+    public function setCast($cast){ //imposta un valore
+        $this->cast = $cast;
+    }
+
+    public function getCast(){ //legge un valore
+        return $this->cast;
+    }
 };
 
-//create an instance of a class (an object) with the 'new' keyword
+//create an instance of a class (an object) with the 'new' keyword //Write values to each property of the object
 $harryPotter = new Movie('Harry Potter', 'Harry Potter Lorem ipsum dolor ecc', 120, []);
 
-//Write values to each property of the object
-$harryPotter->title = 'Harry Potter';
-$harryPotter->overview = 'Harry Potter Lorem ipsum dolor ecc';
-$harryPotter->duration = 120;
-$harryPotter->cast = [ "Daniel Radcliffe", "Rupert Grint", "Emma Watson"];
+$harryPotter->setCast(["Daniel Radcliffe", "Rupert Grint", "Emma Watson"]); 
 
 var_dump($harryPotter);
 
+//$harryPotter->setCast([ "Daniel Radcliffe", "Rupert Grint", "Emma Watson"]);
 
-//create a second instance
+//create a second instance //Write values to each property of the object
 $poorThings = new Movie('Poor Things', 'Poor Things.... Lorem ipsum dolor ecc', 90, [] );
 
-//Write values to each property of the object
-$poorThings->title = 'Poor Things';
-$poorThings->overview = 'Poor Things.... Lorem ipsum dolor ecc';
-$poorThings->duration = 90;
-$poorThings->cast = ["Emma Stone", "Mark Ruffalo", "Willem Dafoe", "Ramy Youssef", "Christopher Abbott", "Jerrod Carmichael"];
+$poorThings->setCast(["Emma Stone", "Mark Ruffalo", "Willem Dafoe", "Ramy Youssef", "Christopher Abbott", "Jerrod Carmichael"]); 
 
 var_dump($poorThings);
+
+//var_dump($harryPotter->getCast());
+//var_dump($poorThings->getCast());
+
 
 
 

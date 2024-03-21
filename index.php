@@ -63,12 +63,20 @@ require_once __DIR__ . '/database/db.php';
                                         <p>Overview: <?= $movie->overview; ?></p>
                                         <span>Duration: <?= $movie->duration; ?> min.</span>
                                         
-                                        <ul> Stars: 
+                                        <ul class="list-unstyled"> Stars: 
                                             <?php foreach($movie->getCast() as $nameCast) : ?>
-                                                <li> <?= $nameCast; ?> </li>
+                                                <li class="px-3"> <?= $nameCast; ?> </li>
                                             <?php endforeach; ?>
                                         </ul>
 
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <ul class="d-flex gap-1 list-unstyled"> Genres: 
+                                            <?php foreach($movie->genres as $genre) : ?>
+                                                <li> <?= $genre->name ?> </li>
+                                            <?php endforeach; ?>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

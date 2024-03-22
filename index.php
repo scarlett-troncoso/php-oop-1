@@ -23,6 +23,8 @@ require_once __DIR__ . '/database/db.php';
 
 //$movies = [$harryPotter, $poorThings]
 
+// Read a static property from the outside
+//var_dump(Movie::$type); 
 ?>
 
 <!doctype html>
@@ -64,10 +66,13 @@ require_once __DIR__ . '/database/db.php';
                                         <span>Duration: <?= $movie->duration; ?> min.</span>
                                         
                                         <ul class="list-unstyled"> Stars: 
-                                            <?php foreach($movie->getCast() as $nameCast) : ?>
+                                            <?php foreach($movie->cast as $nameCast) : ?> 
+                                            <!--foreach($movie->getCast() as $nameCast)--> <!-- cosi sarebbe nell caso i nostri cast siamo rimasti in setCast-->
                                                 <li class="px-3"> <?= $nameCast; ?> </li>
                                             <?php endforeach; ?>
                                         </ul>
+
+                                        <span>Type: <?= $movie::$type; ?></span>
 
                                     </div>
 

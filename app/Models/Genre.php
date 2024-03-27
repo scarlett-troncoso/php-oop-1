@@ -1,10 +1,9 @@
 <?php 
 class Genre{
-    public $name;
+    public array $names;
     
-    public function __construct($name){
-        $this->name = $name;
+    public function __construct($names){
+        $this->names = $names;
     }
 };
-
 ?>

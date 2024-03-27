@@ -1,5 +1,4 @@
 <?php 
-
 /**
  * Class Movie
  */
@@ -13,12 +12,12 @@ class Movie{
     public $genres;
     public $cast;*/ 
 
-    public function __construct(public string $title, public string $overview, public int $duration, public array $genres, public array $cast) 
+    public function __construct(public string $title, public string $overview, public int $duration, public Genre $genres, public array $cast) 
     {
         $this-> title = $title;
         $this-> overview = $overview;
         $this-> duration = $duration;
-        $this-> genres = $genres;
+        //$this-> genres = $genres;
         $this-> cast = $cast;
     }
 

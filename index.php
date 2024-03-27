@@ -30,7 +30,7 @@ require_once __DIR__ . '/database/db.php';
 <!doctype html>
 <html lang="en">
     <head>
-        <title>esercizio php-oop</title>
+        <title>esercizio php-oop1</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -78,11 +78,12 @@ require_once __DIR__ . '/database/db.php';
 
                                     <div class="card-footer">
                                         <ul class="d-flex gap-1 list-unstyled"> Genres: 
-                                            <?php foreach($movie->genres as $genre) : ?>
-                                                <li> <?= $genre->name ?> </li>
+                                            <?php foreach($movie->genres->names as $genre) : ?> <!--prendo, movie, di movie prenso genres di genres prendo names(che é il parametro dentro Genre)-->
+                                                <li> <?= $genre ?> </li>
                                             <?php endforeach; ?>
                                         </ul>
                                     </div>
+
                                 </div>
                             </div>
                         <?php endforeach; ?>
